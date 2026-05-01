@@ -1,165 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Edição de Vídeos</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-body {
-    height: 100vh;
-    background: linear-gradient(120deg, #ff7b7b, #ffb3b3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    body {
+      background: linear-gradient(120deg, #111827, #1f2937);
+      color: white;
+      min-height: 100vh;
+    }
 
-/* ANIMAÇÃO */
-@keyframes aparecer {
-    from {
+    header {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+      color: #ff4d4d;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+      animation: aparecer 0.8s ease;
+    }
+
+    @keyframes aparecer {
+      from {
         opacity: 0;
-        transform: scale(0.8) translateY(30px);
-    }
-    to {
+        transform: translateY(20px);
+      }
+      to {
         opacity: 1;
-        transform: scale(1) translateY(0);
+        transform: translateY(0px);
+      }
     }
-}
 
-/* Caixa */
-.card {
-    width: 340px;
-    padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    text-align: center;
-    color: white;
+    .card h2 {
+      color: #ff9999;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
 
-    animation: aparecer 0.8s ease;
-}
+    .card p {
+      font-size: 14px;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
 
-/* Avatar */
-.avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.7);
-    margin: 0 auto 15px;
-}
+    ul {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
 
-/* Texto */
-h2 {
-    font-weight: 400;
-    margin-bottom: 10px;
-}
+    ul li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
 
-p {
-    font-size: 13px;
-    opacity: 0.9;
-    margin-bottom: 20px;
-}
+    .btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #ff4d4d, #ff9999);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
 
-/* Inputs */
-.input {
-    margin-bottom: 15px;
-}
+    .btn:hover {
+      transform: scale(1.04);
+    }
 
-.input input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-}
-
-/* Opções */
-.options {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    margin-bottom: 20px;
-}
-
-/* Botão */
-button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(90deg, #ff4d4d, #ff9999);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-/* Link */
-.link {
-    margin-top: 15px;
-    font-size: 13px;
-}
-</style>
-
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="card">
+  <header>
+    <h1>🎬 Edição de Vídeos</h1>
+    <p>Aprenda o básico e o avançado para editar como um profissional</p>
+  </header>
 
-    <div class="avatar"></div>
+  <div class="container">
 
-    <h2>Bem-vindo</h2>
-    <p>Entre para continuar</p>
-
-   <form onsubmit="fazerLogin(event)">
-        <div class="input">
-            <input type="text" id="usuario" placeholder="Usuário ou Email" required>
-        </div>
-
-        <div class="input">
-            <input type="password" id="senha" placeholder="Senha" required>
-        </div>
-
-        <div class="options">
-            <label><input type="checkbox"> Lembrar</label>
-            <a href="#" style="color:white;">Esqueceu?</a>
-        </div>
-
-        <button type="submit">Entrar</button>
-   </form>
-
-    <div class="link">
-        Criar conta
+    <div class="card">
+      <h2>📌 O que é edição de vídeo?</h2>
+      <p>
+        Edição de vídeo é o processo de cortar, organizar e melhorar vídeos.
+        Você pode adicionar músicas, efeitos, textos, transições e deixar o vídeo
+        mais bonito e profissional.
+      </p>
     </div>
 
-</div>
-<script>
-function fazerLogin(event) {
-  event.preventDefault();
+    <div class="card">
+      <h2>✂️ Passos básicos para editar</h2>
+      <ul>
+        <li><b>1.</b> Importar os vídeos e fotos</li>
+        <li><b>2.</b> Cortar partes desnecessárias</li>
+        <li><b>3.</b> Colocar música e ajustar o volume</li>
+        <li><b>4.</b> Adicionar textos e legendas</li>
+        <li><b>5.</b> Usar transições suaves</li>
+        <li><b>6.</b> Exportar no formato certo (MP4 recomendado)</li>
+      </ul>
+    </div>
 
-  let usuario = document.getElementById("usuario").value;
-  let senha = document.getElementById("senha").value;
+    <div class="card">
+      <h2>🎨 Dicas para ficar profissional</h2>
+      <ul>
+        <li>Use cortes rápidos para deixar o vídeo dinâmico</li>
+        <li>Coloque zoom e movimentos leves (efeito cinematográfico)</li>
+        <li>Use correção de cor (deixe mais bonito)</li>
+        <li>Adicione legendas para TikTok e Reels</li>
+        <li>Sincronize cortes com a batida da música</li>
+      </ul>
+    </div>
 
-  if (usuario === "miguel" && senha === "1234") {
-  alert("Login feito com sucesso!");
-  window.location.href = "home.html";
-} else {
-  alert("Usuário ou senha incorretos!");
-}
-  }
-}
-</script>
+    <div class="card">
+      <h2>🛠️ Programas recomendados</h2>
+      <p><b>Celular:</b> CapCut, InShot, VN Editor</p>
+      <p><b>PC:</b> Adobe Premiere, DaVinci Resolve, Filmora</p>
+    </div>
+
+    <div class="card">
+      <h2>📲 Qual formato exportar?</h2>
+      <p>
+        Para postar no TikTok/Instagram, use:
+        <br><b>1080x1920 (vertical)</b> e <b>30fps</b>.
+        <br>Para YouTube, use:
+        <br><b>1920x1080 (horizontal)</b> e <b>60fps</b> se possível.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Quer praticar?</h2>
+      <p>
+        Pegue um vídeo simples e tente:
+        cortar, colocar música, legenda e efeitos.
+        Quanto mais você pratica, mais rápido aprende.
+      </p>
+
+      <a class="btn" href="index.html">Sair do Sistema</a>
+    </div>
+
+  </div>
+
+  <footer>
+    Criado por Miguel - Site no GitHub Pages 🌐
+  </footer>
+
 </body>
 </html>
