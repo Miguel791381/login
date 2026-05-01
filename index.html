@@ -123,13 +123,13 @@ button:hover {
     <h2>Bem-vindo</h2>
     <p>Entre para continuar</p>
 
-    <form>
+   <form onsubmit="fazerLogin(event)">
         <div class="input">
-            <input type="text" placeholder="Usuário ou Email">
+            <input type="text" id="usuario" placeholder="Usuário ou Email" required>
         </div>
 
         <div class="input">
-            <input type="password" placeholder="Senha">
+            <input type="password" id="senha" placeholder="Senha" required>
         </div>
 
         <div class="options">
@@ -138,13 +138,27 @@ button:hover {
         </div>
 
         <button>Entrar</button>
-    </form>
+   </form>
 
     <div class="link">
         Criar conta
     </div>
 
 </div>
+<script>
+function fazerLogin(event) {
+  event.preventDefault();
 
+  let usuario = document.getElementById("usuario").value;
+  let senha = document.getElementById("senha").value;
+
+  if (usuario === "miguel" && senha === "1234") {
+    alert("Login feito com sucesso!");
+    window.location.href = "cadastro.html";
+  } else {
+    alert("Usuário ou senha incorretos!");
+  }
+}
+</script>
 </body>
 </html>
