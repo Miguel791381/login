@@ -3,58 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Home - Edição de Vídeos</title>
 
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: "Segoe UI", sans-serif;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(120deg, #ff7b7b, #ffb3b3);
+    }
+
+    body {
+      background: linear-gradient(120deg, #111827, #1f2937);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+      color: #ff4d4d;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
     }
 
     .card {
-      width: 380px;
-      padding: 35px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.15);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      text-align: center;
-      color: white;
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
       animation: aparecer 0.8s ease;
     }
 
     @keyframes aparecer {
       from {
         opacity: 0;
-        transform: scale(0.9) translateY(20px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
-        transform: scale(1) translateY(0);
+        transform: translateY(0px);
       }
     }
 
-    h1 {
-      margin: 0;
-      font-size: 26px;
+    .card h2 {
+      color: #ff9999;
+      margin-bottom: 10px;
+      font-size: 20px;
     }
 
-    p {
-      margin-top: 10px;
+    .card p {
       font-size: 14px;
-      opacity: 0.9;
+      opacity: 0.95;
+      line-height: 1.6;
     }
 
-    button {
+    ul {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
       width: 100%;
-      margin-top: 25px;
+      text-align: center;
+      margin-top: 15px;
       padding: 12px;
       border: none;
       border-radius: 12px;
@@ -63,24 +101,96 @@
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
+      text-decoration: none;
     }
 
-    button:hover {
-      transform: scale(1.05);
+    .btn:hover {
+      transform: scale(1.04);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      opacity: 0.7;
+      margin-top: 30px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>Bem-vindo!</h1>
-    <p>Você entrou no sistema com sucesso 😄</p>
+  <header>
+    <h1>🎬 Edição de Vídeos</h1>
+    <p>Aprenda o básico e o avançado para editar como um profissional</p>
+  </header>
 
-    <button onclick="window.location.href='index.html'">
-      Sair
-    </button>
+  <div class="container">
+
+    <div class="card">
+      <h2>📌 O que é edição de vídeo?</h2>
+      <p>
+        Edição de vídeo é o processo de cortar, organizar e melhorar vídeos.
+        Você pode adicionar músicas, efeitos, textos, transições e deixar o vídeo
+        mais bonito e profissional.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>✂️ Passos básicos para editar</h2>
+      <ul>
+        <li><b>1.</b> Importar os vídeos e fotos</li>
+        <li><b>2.</b> Cortar partes desnecessárias</li>
+        <li><b>3.</b> Colocar música e ajustar o volume</li>
+        <li><b>4.</b> Adicionar textos e legendas</li>
+        <li><b>5.</b> Usar transições suaves</li>
+        <li><b>6.</b> Exportar no formato certo (MP4 recomendado)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🎨 Dicas para ficar profissional</h2>
+      <ul>
+        <li>Use cortes rápidos para deixar o vídeo dinâmico</li>
+        <li>Coloque zoom e movimentos leves (efeito cinematográfico)</li>
+        <li>Use correção de cor (deixe mais bonito)</li>
+        <li>Adicione legendas para TikTok e Reels</li>
+        <li>Sincronize cortes com a batida da música</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🛠️ Programas recomendados</h2>
+      <p><b>Celular:</b> CapCut, InShot, VN Editor</p>
+      <p><b>PC:</b> Adobe Premiere, DaVinci Resolve, Filmora</p>
+    </div>
+
+    <div class="card">
+      <h2>📲 Qual formato exportar?</h2>
+      <p>
+        Para postar no TikTok/Instagram, use:
+        <br><b>1080x1920 (vertical)</b> e <b>30fps</b>.
+        <br>Para YouTube, use:
+        <br><b>1920x1080 (horizontal)</b> e <b>60fps</b> se possível.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Quer praticar?</h2>
+      <p>
+        Pegue um vídeo simples e tente:
+        cortar, colocar música, legenda e efeitos.
+        Quanto mais você pratica, mais rápido aprende.
+      </p>
+
+      <a class="btn" href="index.html">Sair do Sistema</a>
+    </div>
+
   </div>
+
+  <footer>
+    Criado por Miguel - Site no GitHub Pages 🌐
+  </footer>
 
 </body>
 </html>
