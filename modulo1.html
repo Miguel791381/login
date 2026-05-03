@@ -1,63 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 1 - Introdução</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .box {
-            max-width: 700px;
-            margin: auto;
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background: #00ff99;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-        a:hover {
-            background: #00cc77;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 1 - Introdução</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color:white;
+    }
+
+    header{
+      padding: 25px;
+      text-align:center;
+      background:#111;
+      border-bottom: 2px solid #00ff99;
+    }
+
+    header h1{
+      margin:0;
+      font-size: 28px;
+      color:#00ff99;
+    }
+
+    .container{
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+    }
+
+    h2{
+      color:#00ff99;
+      margin-top: 25px;
+    }
+
+    p{
+      font-size: 18px;
+      line-height: 1.6;
+      color:#ddd;
+    }
+
+    .btn-area{
+      margin-top: 30px;
+      text-align:center;
+    }
+
+    .btn{
+      display:inline-block;
+      margin: 10px;
+      padding: 14px 22px;
+      background: #00ff99;
+      color:black;
+      font-weight:bold;
+      border-radius: 12px;
+      text-decoration:none;
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      transform: scale(1.05);
+      background:#00cc77;
+    }
+
+    .btn-home{
+      background:#444;
+      color:white;
+    }
+
+    .btn-home:hover{
+      background:#666;
+    }
+
+    footer{
+      text-align:center;
+      padding: 25px;
+      color:#777;
+      font-size:14px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="box">
-        <h1>📘 Módulo 1 - O que é edição de vídeo?</h1>
+  <header>
+    <h1>📘 Módulo 1 - Introdução</h1>
+  </header>
 
-        <p>
-            Neste módulo você vai aprender o que é edição de vídeo e por que ela é importante.
-        </p>
+  <div class="container">
+    <div class="card">
 
-        <h2>📌 Conteúdo</h2>
-        <p>
-            Edição de vídeo é o processo de cortar, organizar, adicionar músicas, efeitos e textos para deixar o vídeo mais profissional.
-        </p>
+      <p>
+        Bem-vindo ao curso! Neste módulo você vai entender o que é edição de vídeo e por que ela é tão importante para redes sociais.
+      </p>
 
-        <h2>🎯 Exercício</h2>
-        <p>
-            Pegue um vídeo no seu celular e tente cortar as partes ruins usando o CapCut.
-        </p>
+      <h2>🎬 O que é edição de vídeo?</h2>
+      <p>
+        Edição de vídeo é o processo de cortar cenas, adicionar músicas, textos, efeitos e ajustar cores para deixar o vídeo mais profissional.
+      </p>
 
-        <br>
+      <h2>📌 Por que isso é importante?</h2>
+      <p>
+        Um vídeo bem editado chama atenção, aumenta visualizações e deixa seu conteúdo mais profissional.
+      </p>
 
-        <a href="home.html">🏠 Voltar para o Menu</a>
-        <a href="modulo2.html">➡️ Próximo Módulo</a>
+      <h2>📝 Exercício</h2>
+      <p>
+        Pegue qualquer vídeo no seu celular e tente cortar partes ruins no CapCut.
+      </p>
+
+      <div class="btn-area">
+        <a class="btn" href="home.html">🏠 Menu</a>
+        <a class="btn" href="modulo2.html">➡️ Próximo</a>
+      </div>
+
     </div>
+  </div>
+
+  <footer>
+    © 2026 - Curso de Edição
+  </footer>
 
 </body>
 </html>
