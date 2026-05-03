@@ -1,246 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Edição de Vídeos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Curso de Edição</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", sans-serif;
-      <style>
-  body{
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .modulos-box{
-    max-width: 700px;
-    margin: 60px auto;
-    background: #222;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-  }
-
-  .modulos-box h2{
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-
-  .modulos-box a{
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin: 12px 0;
-    background: #00ff99;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-  }
-
-  .modulos-box a:hover{
-    background: #00cc77;
-  }
-</style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color:white;
     }
 
-    body {
-      background: linear-gradient(120deg, #111827, #1f2937);
-      color: white;
-      min-height: 100vh;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
-      padding: 20px;
+    header{
+      padding: 30px;
       text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
+      background: #111;
+      border-bottom: 2px solid #00ff99;
     }
 
-    header h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
-      color: #ff4d4d;
+    header h1{
+      margin:0;
+      font-size: 32px;
+      color: #00ff99;
     }
 
-    header p {
-      font-size: 14px;
-      opacity: 0.9;
+    header p{
+      margin-top: 8px;
+      color: #ccc;
+      font-size: 16px;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 30px auto;
+    .container{
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      backdrop-filter: blur(12px);
-      padding: 25px;
-      border-radius: 18px;
-      margin-bottom: 20px;
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
-      animation: aparecer 0.8s ease;
+    .card{
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
-    @keyframes aparecer {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0px);
-      }
+    .card h2{
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 26px;
     }
 
-    .card h2 {
-      color: #ff9999;
-      margin-bottom: 10px;
+    .modulo-btn{
+      display:block;
+      padding: 18px;
+      margin: 15px 0;
+      text-align:center;
       font-size: 20px;
-    }
-
-    .card p {
-      font-size: 14px;
-      opacity: 0.95;
-      line-height: 1.6;
-    }
-
-    ul {
-      margin-top: 10px;
-      margin-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-      margin-top: 15px;
-      padding: 12px;
-      border: none;
-      border-radius: 12px;
-      background: linear-gradient(90deg, #ff4d4d, #ff9999);
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
+      font-weight:bold;
+      background: #00ff99;
+      color:black;
+      border-radius: 14px;
+      text-decoration:none;
       transition: 0.3s;
-      text-decoration: none;
     }
 
-    .btn:hover {
-      transform: scale(1.04);
+    .modulo-btn:hover{
+      transform: scale(1.03);
+      background: #00cc77;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      opacity: 0.7;
-      margin-top: 30px;
+    .logout{
+      display:block;
+      margin-top: 25px;
+      text-align:center;
+      padding: 14px;
+      border-radius: 14px;
+      background: #ff4444;
+      color:white;
+      font-weight:bold;
+      text-decoration:none;
+      transition: 0.3s;
+    }
+
+    .logout:hover{
+      background: #cc0000;
+      transform: scale(1.03);
+    }
+
+    footer{
+      text-align:center;
+      padding: 25px;
+      color:#777;
+      font-size:14px;
     }
   </style>
 </head>
 
 <body>
 
-  <section>
-    <div class="modulos-box">
-    <h2>📚 Módulos do Curso</h2>
-
-    <a href="modulo1.html">📘 Módulo 1 - Introdução</a><br>
-    <a href="modulo2.html">✂️ Módulo 2 - Cortes e Organização</a><br>
-  </section>
-
-</body>
-</html>
   <header>
-    <h1>🎬 Edição de Vídeos</h1>
-    <p>Aprenda o básico e o avançado para editar como um profissional</p>
+    <h1>🎬 Curso de Edição de Vídeos</h1>
+    <p>Aprenda a editar vídeos do zero até profissional</p>
   </header>
 
   <div class="container">
-
     <div class="card">
-      <h2>📌 O que é edição de vídeo?</h2>
-      <p>
-        Edição de vídeo é o processo de cortar, organizar e melhorar vídeos.
-        Você pode adicionar músicas, efeitos, textos, transições e deixar o vídeo
-        mais bonito e profissional.
-      </p>
+      <h2>📚 Módulos do Curso</h2>
+
+      <a class="modulo-btn" href="modulo1.html">📘 Módulo 1 - Introdução</a>
+      <a class="modulo-btn" href="modulo2.html">✂️ Módulo 2 - Cortes e Organização</a>
+
+      <a class="logout" href="index.html">🚪 Sair</a>
     </div>
-
-    <div class="card">
-      <h2>✂️ Passos básicos para editar</h2>
-      <ul>
-        <li><b>1.</b> Importar os vídeos e fotos</li>
-        <li><b>2.</b> Cortar partes desnecessárias</li>
-        <li><b>3.</b> Colocar música e ajustar o volume</li>
-        <li><b>4.</b> Adicionar textos e legendas</li>
-        <li><b>5.</b> Usar transições suaves</li>
-        <li><b>6.</b> Exportar no formato certo (MP4 recomendado)</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>🎨 Dicas para ficar profissional</h2>
-      <ul>
-        <li>Use cortes rápidos para deixar o vídeo dinâmico</li>
-        <li>Coloque zoom e movimentos leves (efeito cinematográfico)</li>
-        <li>Use correção de cor (deixe mais bonito)</li>
-        <li>Adicione legendas para TikTok e Reels</li>
-        <li>Sincronize cortes com a batida da música</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>🛠️ Programas recomendados</h2>
-      <p><b>Celular:</b> CapCut, InShot, VN Editor</p>
-      <p><b>PC:</b> Adobe Premiere, DaVinci Resolve, Filmora</p>
-    </div>
-
-    <div class="card">
-      <h2>📲 Qual formato exportar?</h2>
-      <p>
-        Para postar no TikTok/Instagram, use:
-        <br><b>1080x1920 (vertical)</b> e <b>30fps</b>.
-        <br>Para YouTube, use:
-        <br><b>1920x1080 (horizontal)</b> e <b>60fps</b> se possível.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>🚀 Quer praticar?</h2>
-      <p>
-        Pegue um vídeo simples e tente:
-        cortar, colocar música, legenda e efeitos.
-        Quanto mais você pratica, mais rápido aprende.
-      </p>
-
-      <a class="btn" href="index.html">Sair do Sistema</a>
-    </div>
-
   </div>
 
   <footer>
-    Criado por Miguel - Site no GitHub Pages 🌐
+    © 2026 - Curso de Edição | Todos os direitos reservados
   </footer>
 
 </body>
