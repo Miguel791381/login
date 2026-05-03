@@ -1,74 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Módulo 2 - Cortes e Organização</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 1 - Introdução</title>
 
   <style>
-    body {
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color:white;
+    }
+
+    header{
+      padding: 25px;
+      text-align:center;
+      background:#111;
+      border-bottom: 2px solid #00ff99;
+    }
+
+    header h1{
+      margin:0;
+      font-size: 28px;
+      color:#00ff99;
+    }
+
+    .container{
+      max-width: 900px;
+      margin: 40px auto;
       padding: 20px;
     }
 
-    .box {
-      max-width: 800px;
-      margin: auto;
-      background: #222;
-      padding: 25px;
-      border-radius: 12px;
+    .card{
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
     }
 
-    a {
-      display: inline-block;
+    h2{
+      color:#00ff99;
+      margin-top: 25px;
+    }
+
+    p{
+      font-size: 18px;
+      line-height: 1.6;
+      color:#ddd;
+    }
+
+    .btn-area{
+      margin-top: 30px;
+      text-align:center;
+    }
+
+    .btn{
+      display:inline-block;
       margin: 10px;
-      padding: 10px 20px;
+      padding: 14px 22px;
       background: #00ff99;
-      color: black;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      color:black;
+      font-weight:bold;
+      border-radius: 12px;
+      text-decoration:none;
+      transition: 0.3s;
     }
 
-    a:hover {
-      background: #00cc77;
+    .btn:hover{
+      transform: scale(1.05);
+      background:#00cc77;
+    }
+
+    .btn-home{
+      background:#444;
+      color:white;
+    }
+
+    .btn-home:hover{
+      background:#666;
+    }
+
+    footer{
+      text-align:center;
+      padding: 25px;
+      color:#777;
+      font-size:14px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="box">
-    <h1>✂️ Módulo 2 - Cortes e Organização</h1>
+  <header>
+    <h1>📘 Módulo 1 - Introdução</h1>
+  </header>
 
-    <p>
-      Neste módulo você vai aprender como cortar vídeos e organizar as cenas para deixar o vídeo mais rápido e interessante.
-    </p>
+  <div class="container">
+    <div class="card">
 
-    <h2>📌 O que você vai aprender</h2>
-    <p>✅ Como cortar partes erradas</p>
-    <p>✅ Como deixar o vídeo com ritmo</p>
-    <p>✅ Como organizar os clipes em ordem</p>
+      <p>
+        Bem-vindo ao curso! Neste módulo você vai entender o que é edição de vídeo e por que ela é tão importante para redes sociais.
+      </p>
 
-    <h2>🎯 Dica importante</h2>
-    <p>
-      Vídeos bons não têm partes paradas. Corte tudo que for repetitivo ou demorado.
-    </p>
+      <h2>🎬 O que é edição de vídeo?</h2>
+      <p>
+        Edição de vídeo é o processo de cortar cenas, adicionar músicas, textos, efeitos e ajustar cores para deixar o vídeo mais profissional.
+      </p>
 
-    <h2>📝 Exercício</h2>
-    <p>
-      Pegue um vídeo de 1 minuto e corte ele para ficar com apenas 20 segundos, deixando só as melhores partes.
-    </p>
+      <h2>📌 Por que isso é importante?</h2>
+      <p>
+        Um vídeo bem editado chama atenção, aumenta visualizações e deixa seu conteúdo mais profissional.
+      </p>
 
-    <br>
+      <h2>📝 Exercício</h2>
+      <p>
+        Pegue qualquer vídeo no seu celular e tente cortar partes ruins no CapCut.
+      </p>
 
-    <a href="modulo1.html">⬅️ Voltar para o Módulo 1</a>
-    <a href="home.html">🏠 Menu Principal</a>
-    <a href="modulo3.html">➡️ Próximo Módulo</a>
+      <div class="btn-area">
+        <a class="btn" href="home.html">🏠 Menu</a>
+        <a class="btn" href="modulo2.html">➡️ Próximo</a>
+      </div>
+
+    </div>
   </div>
+
+  <footer>
+    © 2026 - Curso de Edição
+  </footer>
 
 </body>
 </html>
